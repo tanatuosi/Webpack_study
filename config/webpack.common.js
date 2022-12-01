@@ -22,12 +22,14 @@ module.exports = {
         rules: [
           {
             test: /\.(js|jsx|ts|tsx)/,
-            use: {
-              loader: "babel-loader",
+            use: [{
+              loader: 'babel-loader',
               // options: {
-              //   configFile: path.resolve(__dirname, '../babel.config.js'),
-              // }
-            }
+              //     configFile: dirs.BABEL_CONFIG,
+              // },
+            }, {
+              loader: 'source-map-loader',
+          }],
             
           },
           {
@@ -78,30 +80,38 @@ module.exports = {
               "sass-loader",
             ],
           },
+          // {
+          //   test: /\.(bmp|gif|png|jpe?g)$/,
+          //   use: [
+          //     {
+          //       loader: "url-loader",
+          //       options: {
+          //         limit: 10 * 1024,
+          //         name: "[name].[contenthash:8].[ext]",
+          //         outputPath: "assets/images",
+          //       },
+          //     },
+          //   ],
+          // },
+          // {
+          //   test: /\.(ttf|woff|woff2|eot|otf)$/,
+          //   use: [
+          //     {
+          //       loader: "url-loader",
+          //       options: {
+          //         name: "[name].[contenthash:8].[ext]",
+          //         outputPath: "assets/fonts",
+          //       },
+          //     },
+          //   ],
+          // },
           {
-            test: /\.(bmp|gif|png|jpe?g)$/,
-            use: [
-              {
-                loader: "url-loader",
-                options: {
-                  limit: 10 * 1024,
-                  name: "[name].[contenthash:8].[ext]",
-                  outputPath: "assets/images",
-                },
-              },
-            ],
-          },
-          {
-            test: /\.(ttf|woff|woff2|eot|otf)$/,
-            use: [
-              {
-                loader: "url-loader",
-                options: {
-                  name: "[name].[contenthash:8].[ext]",
-                  outputPath: "assets/fonts",
-                },
-              },
-            ],
+            test: /\.(png|jpg|gif|svg)$/,
+            loader: "url-loader",
+            options: {
+                limit:1024000,
+                name: "[name].[ext]?[hash]"
+            }
           },
         ],
       },

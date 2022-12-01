@@ -4,9 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="http://fanruan.design/fineui/2.0/fineui.min.css" />
+    <script src="http://fanruan.design/fineui/2.0/fineui.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <div id="root"></div>
+    <!-- <script>
+      !(function () {
+          var App = BI.inherit(BI.Widget, {
+              props: {
+                  baseCls: "my-app",
+                  width: 300,
+                  height: 300
+              },
+              render: function () {
+                  return {
+                      type: "bi.center_adapt",
+                      width: 300,
+                      height: 300,
+                      items: [{
+                          type: "bi.button",
+                          text: "这是一个按钮"
+                      }]
+                  };
+              }
+          });
+          BI.shortcut("my.app", App);
+      })();
+  </script>
+  <script>
+      window.onload = function () {
+          // 这里演示在坐标（100,100）的位置放了一个宽300高300的有边框的一个面板，在该面板的正中心有一个按钮
+          BI.createWidget({
+              type: "bi.absolute",
+              element: "body",
+              items: [{
+                  el: {
+                      type: "my.app",
+                      cls: "my-custom-border"
+                  },
+                  left: 100,
+                  top: 100
+              }]
+          })
+      };
+  </script> -->
   </body>
 </html>
