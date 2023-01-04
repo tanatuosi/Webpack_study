@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import Home from "./Home.tsx"
+import '@engine/table'
 // import { ParameterButton } from '@engine/controller';
 // export default function App() {
 //   return (
@@ -22,6 +23,18 @@ import Home from "./Home.tsx"
 //       },
 //   }],
 // });
+
+BI.createWidget({
+  element: '#root',
+  type: "bi.center_adapt",
+  width: 300,
+  height: 300,
+  items: [{
+      type: "bi.button",
+      text: "这是一个按钮"
+  }]
+});
+
 
 // const root = document.getElementById("root")
 // ReactDOM.render(<App />, root)

@@ -4,30 +4,12 @@
         "@babel/preset-react", 
         "@babel/preset-typescript",
     ],
-    // "plugins": [
-    //     [
-    //         "@babel/plugin-transform-runtime",
-    //         {
-    //             "regenerator": false,
-    //         },
-    //     ],
-    //     [
-    //         "@babel/plugin-proposal-decorators",
-    //         {
-    //             "legacy": true,
-    //         },
-    //     ],
-    //     "@babel/plugin-proposal-class-properties",
-    //     [
-    //         "@babel/plugin-transform-classes",
-    //         {
-    //             "loose": true,
-    //         },
-    //     ],
-    //     "@babel/plugin-transform-proto-to-assign",
-    //     ["@babel/plugin-transform-react-jsx", {
-    //         "pragma": "BI.h",
-    //         "pragmaFrag": "BI.Fragment",
-    //     }],
-    // ]
+    "plugins": [
+        [
+            "@babel/plugin-transform-classes",
+            {
+                "loose": true,
+            },
+        ],
+    ]
 }
